@@ -1,0 +1,13 @@
+#Options{
+  display: flex;
+  flex-direction: row;
+}
+
+#Output-window {
+  background-color: darkgrey;
+  height: 400px;
+  width: 100%;
+}
+form{
+  background-color: aqua;
+}

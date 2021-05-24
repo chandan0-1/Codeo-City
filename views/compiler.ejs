@@ -1,0 +1,45 @@
+      <link rel="stylesheet" href="css/compiler.css">
+
+
+<form action="/send/request" method="POST">
+  <textarea
+    name="code"
+    id="code"
+    placeholder="Enter ur code here"
+    cols="30"
+    rows="10"
+  ></textarea>
+
+
+  <div id="Options">
+      <label for="category">Language:&nbsp </label>
+      <input type="text" name="language" placeholder="Choose Language:" id="category-header" list="Language" required>  
+        
+        <datalist id="Language">
+            <option value="py">
+            <option value="Java">
+            <option value="C++">
+            <option value="HTML">
+            <option value="Javascript">
+        </datalist> 
+
+
+        <textarea 
+        name="input"
+        id="input"
+        placeholder="Enter input here"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <input type="submit" value="Compile and Run">
+        
+
+      
+    </div>
+  </form>
+  
+  <div id="Output-window">
+    <p>Output:</p>
+    <p id="Output">sdgsdg</p>
+  </div>
