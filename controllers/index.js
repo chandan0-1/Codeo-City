@@ -1,15 +1,20 @@
 const request = require("request");
+var ans = "Output will printed here..!!";
 
 module.exports = function (req, res) {
   return res.send("<h1>Hello !</h1>");
 };
 
 module.exports.compiler = function (req, res) {
-  return res.render('compiler')
+  return res.render("compiler", {
+    out: ans,
+  });
 };
 
-module.exports.output = async function (req, res) {
-  console.log(req.body);
+// let OutPut = document.getElementById("output");
+
+module.exports.compile = async function (req, res) {
+  // console.log(req.body);
   try {
     var options = {
       method: "POST",
@@ -19,22 +24,24 @@ module.exports.output = async function (req, res) {
       },
       body: JSON.stringify(req.body),
     };
+
     request(options, function (error, response) {
-      if (error){
-        console.log("Error arrises while fetching the data",error); 
+      if (error) {
+        console.log("Error arrises while fetching the data", error);
         return;
-        // throw new Error(error);
-      } 
-      var res = JSON.parse(response.body);
-      console.log(res.output)
-      return res.redirect("compiler");
+      }
+
+      var temp = JSON.parse(response.body);
+      ans = temp.output;
+      console.log(ans);
     });
-  } 
-  
-   
-  catch (err) {
+
+    return res.render("compiler", {
+      out: ans,
+    });
+  } catch (err) {
     console.log(err);
     return;
   }
-};
 
+};

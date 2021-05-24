@@ -1,13 +1,58 @@
-#Options{
+body{
+  margin: 0;
+}
+
+#Container{
   display: flex;
   flex-direction: row;
 }
 
-#Output-window {
-  background-color: darkgrey;
-  height: 400px;
-  width: 100%;
+
+#Options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-form{
-  background-color: aqua;
+
+#Output-window {
+  padding: 10px;
+  background-color: darkgrey;
+  width: 25%;
+  height: 100vh;
+}
+#output-header{
+  color: rgb(7, 255, 172);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#output{
+  margin-left: 1vw;
+}
+#form-Container{
+  background-color: lightgray;
+  width:75%
+}
+#code{
+  width:98%;
+  height:65vh;
+  font-size: 1.3rem;
+  padding: 15px;
+}
+
+#category-header{
+  width:20vw;
+  height: 5vh;
+  font-size: 1rem;
+}
+
+#run-btn{
+  width:10vw;
+  height: 4vh;
+  font-size: 1rem;
+}
+#input{
+  height:25vh;
+  width:25vw;
+  padding: 12px;
 }
