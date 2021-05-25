@@ -1,10 +1,10 @@
       <link rel="stylesheet" href="css/compiler.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <div id="Container">
 
   <div id="form-Container">
-      <form action="/send/request" method="POST">
+      <form action="/send/request" id='new-post-form' method="POST">
         <textarea
           name="code"
           id="code"
@@ -19,7 +19,7 @@
             <input type="text" name="language" placeholder="Choose Language:" id="category-header" list="Language" required>  
               
               <datalist id="Language">
-                  <option value="py">
+                  <option value="py" >Python</option>
                   <option value="Java">
                   <option value="C++">
                   <option value="HTML">
@@ -43,9 +43,9 @@
         </form>
   </div>
     
-    <div id="Output-window">
-      <p id="output-header">Output:</p>
-      <p id="output"> <%= out %> </p>
-    </div>
+    <%- include('output')%>
 
 </div>
+
+
+<script src="/js/script.js"></script>

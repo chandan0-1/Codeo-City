@@ -32,13 +32,22 @@ module.exports.compile = async function (req, res) {
       }
 
       var temp = JSON.parse(response.body);
-      ans = temp.output;
+      if (temp){
+      ans = temp.output;}
+      // $.("#output").html(ans);
+      // $("#output").text("Hello world!");
       console.log(ans);
+      if (req.xhr) {
+        return res.status(200).json({
+          data: {
+            ans: ans,
+          },
+          message: "Post Created!",
+        });
+      }
     });
 
-    return res.render("compiler", {
-      out: ans,
-    });
+    // return res.redirect("back");
   } catch (err) {
     console.log(err);
     return;
