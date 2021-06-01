@@ -3,8 +3,8 @@ const router = express.Router();
 
 const cntrl = require("../controllers/index");
 
-router.get("/", cntrl);
-router.get("/compiler", cntrl.compiler);
+// router.get("/", cntrl);
+router.get("/", cntrl.compiler);
 
 router.post("/send/request", cntrl.compile);
 

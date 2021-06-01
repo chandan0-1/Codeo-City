@@ -34,7 +34,7 @@ body{
   width:75%
 }
 #code{
-  width:98%;
+  width:97%;
   height:65vh;
   font-size: 1.3rem;
   padding: 15px;
@@ -49,10 +49,10 @@ body{
 #run-btn{
   width:10vw;
   height: 4vh;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 #input{
   height:25vh;
-  width:25vw;
+  width:26vw;
   padding: 12px;
 }

@@ -1,51 +1,55 @@
-      <link rel="stylesheet" href="css/compiler.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="css/compiler.css" />
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 
 <div id="Container">
-
   <div id="form-Container">
-      <form action="/send/request" id='new-post-form' method="POST">
+    <form action="/send/request" id="new-post-form" method="POST">
+      <textarea
+        name="code"
+        id="code"
+        placeholder="Start writing code from here.."
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <div id="Options">
+        <label for="category">Language:&nbsp </label>
+        <input
+          type="text"
+          name="language"
+          placeholder="Choose Language:"
+          id="category-header"
+          list="Language"
+          required
+        />
+
+        <datalist id="Language">
+          <option value="py"></option>
+          <option value="Java"></option>
+          <option value="C++"></option>
+          <option value="HTML"></option>
+          <option value="Javascript"></option>
+        </datalist>
+
+        <input id="run-btn" type="submit" value="Compile and Run" />
+
         <textarea
-          name="code"
-          id="code"
-          placeholder="Enter ur code here"
+          name="input"
+          id="input"
+          placeholder="Enter input here"
           cols="30"
           rows="10"
         ></textarea>
-
-
-        <div id="Options">
-            <label for="category">Language:&nbsp </label>
-            <input type="text" name="language" placeholder="Choose Language:" id="category-header" list="Language" required>  
-              
-              <datalist id="Language">
-                  <option value="py" >Python</option>
-                  <option value="Java">
-                  <option value="C++">
-                  <option value="HTML">
-                  <option value="Javascript">
-              </datalist> 
-
-              <input id="run-btn" type="submit" value="Compile and Run">
-
-              <textarea 
-              name="input"
-              id="input"
-              placeholder="Enter input here"
-              cols="30"
-              rows="10"
-            ></textarea>
-
-              
-
-            
-          </div>
-        </form>
+      </div>
+    </form>
   </div>
-    
-    <%- include('output')%>
 
+  <%- include('output')%>
 </div>
-
 
 <script src="/js/script.js"></script>

@@ -1,10 +1,6 @@
 const request = require("request");
 var ans = "Output will printed here..!!";
 
-module.exports = function (req, res) {
-  return res.send("<h1>Hello !</h1>");
-};
-
 module.exports.compiler = function (req, res) {
   return res.render("compiler", {
     out: ans,
@@ -32,8 +28,9 @@ module.exports.compile = async function (req, res) {
       }
 
       var temp = JSON.parse(response.body);
-      if (temp){
-      ans = temp.output;}
+      if (temp) {
+        ans = temp.output;
+      }
       // $.("#output").html(ans);
       // $("#output").text("Hello world!");
       console.log(ans);
@@ -52,5 +49,4 @@ module.exports.compile = async function (req, res) {
     console.log(err);
     return;
   }
-
 };
