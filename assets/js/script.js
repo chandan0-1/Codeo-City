@@ -1,58 +1,47 @@
-// CodeMirror(document.querySelector("#codemirror-textarea"), {
-//   lineNumbers: true,
-//   tabSize: 4,
-//   value: "",
-//   mode: "python",
-//   theme: "monokai",
-// });
+var code
+YUI().use("aui-ace-editor", function (Y) {
+  var editor = new Y.AceEditor({
+    boundingBox: "#myEditor",
+    height: "650",
+    mode: "",
+    value: 'print("Hello world")',
+    width: "1290",
+  }).render();
 
-// // $(document).ready(function () {
-// //   let code = $(".codemirror-textarea")[0];
-// //   let editor = CodeMirror.fromTextArea(
-// //     document.getElementById("codemirror-textarea"),
-// //     {
-// //       lineNumbers: true,
-// //       mode: "htmlmixed",
-// //       theme:'monokai'
-// //     }
-// //   );
-// // });
+  var mode = Y.one("#mode");
+  var fileInput = Y.one("#value");
 
-{
-  console.log(1)
-  // method to submit the form data for new post using AJAX
-  let createPost = function () {
-    let newPostForm = $("#new-post-form");
+  console.log(fileInput)
+  code = editor.get("value");
 
-    newPostForm.submit(function (e) {
-      e.preventDefault();
 
-      $.ajax({
-        type: "post",
-        url: "/send/request",
-        data: newPostForm.serialize(),
-        success: function (data) {
-          // console.log(data.data.ans);
-          // let newPost = newPostDom(data.data.ans);
-          $("#output").text(data.data.ans);
-        },
-        error: function (err) {
-          console.log(err.responseText);
-        },
-      });
+  if (mode) {
+    var contents = {
+      python: 'print("Hello World")',
+      javascript: 'alert("Write something here...");',
+      json: '{"value": "Write something here..."}',
+      php: '<?php echo "Write something here..."; ?>',
+      xml: '<value attr="something">Write something here...</value>',
+      java: ''
+    };
+
+    var currentMode = "javascript";
+
+    // console.log("editor")
+    var updateValue = function () {
+      editor.set("value", contents[currentMode]);
+    };
+
+    mode.on("change", function (event) {
+      currentMode = this.val();
+      editor.set("mode", currentMode);
+      updateValue();
     });
-  };
+  }
+});
 
+runbtn = document.getElementById("run-btn");
+runbtn.addEventListener("click",function(){
+  document.getElementById("code").value = code;
+})
 
-  // Method to create a post in the DOM
-
-
-  // let newPostDom = function(ans){
-  //   return $(`<div id="Output-window">
-  //             <p id="output-header">Output:</p>
-  //             <p id="output"> ${ans}</p>
-  //             </div>
-  //           `);
-  // }
-  createPost();
-}

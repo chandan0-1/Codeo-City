@@ -15,10 +15,13 @@ body{
 }
 
 #Output-window {
+  position: absolute;
   padding: 10px;
   background-color: darkgrey;
   width: 25%;
   height: 100vh;
+  right:0;
+  top:0
 }
 #output-header{
   color: rgb(7, 255, 172);

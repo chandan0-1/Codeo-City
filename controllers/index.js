@@ -33,13 +33,13 @@ module.exports.compile = async function (req, res) {
       }
       // $.("#output").html(ans);
       // $("#output").text("Hello world!");
-      console.log(ans);
+      console.log("Hello",ans);
       if (req.xhr) {
         return res.status(200).json({
           data: {
             ans: ans,
           },
-          message: "Post Created!",
+          message: "Compiled Successfully!",
         });
       }
     });

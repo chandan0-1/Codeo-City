@@ -14,8 +14,20 @@
     <form action="/send/request" id="new-post-form" method="POST">
       
       <div id="myWrapper">
-        <div id="myEditor"></div>
-      </div>
+  <form class="form">
+    <div class="form-group">
+      <label for="mode" class="control-label">Language Mode:</label>
+      <select id="mode" class="form-control">
+        <option>python</option>
+        <option>java</option>
+
+      </select>
+    </div>
+  </form>
+  <div id="myEditor"></div>
+</div>
+
+      <input type="hidden" value="" name = "code" id="code">
       <!-- <textarea
         name="code"
         id="code"
@@ -43,7 +55,7 @@
 
 
 
-        <input id="run-btn" type="submit" value="Compile and Run" />
+        <input id="run-btn"  type="submit" value="Compile and Run" />
 
         <textarea
           name="input"
@@ -58,9 +70,9 @@
 
   <%- include('output')%>
 </div>
-<script src="js/prism.js"></script>
+<!-- <script src="js/prism.js"></script> -->
 
-<script>
+<!-- <script>
   var mode = document.getElementById("category-header")
   console.log(mode)
   YUI().use(
@@ -77,5 +89,7 @@
     ).render();
   }
 );
-</script>
+
+// console.log(Y.one('#value'))
+</script> -->
 <script src="/js/script.js"></script>
