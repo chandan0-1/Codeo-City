@@ -8,8 +8,6 @@ const fetch = require("node-fetch");
 //using EJS as middleware to render pages
 app.use(expressEjsLayouts);
 
-app.post("https://codexweb.netlify.app/.netlify/functions/enforceCode");
-
 app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

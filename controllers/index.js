@@ -10,7 +10,7 @@ module.exports.compiler = function (req, res) {
 // let OutPut = document.getElementById("output");
 
 module.exports.compile = async function (req, res) {
-  // console.log(req.body);
+  console.log(req.body);
   try {
     var options = {
       method: "POST",

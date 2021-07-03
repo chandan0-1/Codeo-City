@@ -33,7 +33,7 @@ body{
   background-color: lightgray;
   width:75%
 }
-#code{
+#code, #myEditor{
   width:97%;
   height:65vh;
   font-size: 1.3rem;
@@ -41,8 +41,8 @@ body{
 }
 
 #category-header{
-  width:20vw;
-  height: 5vh;
+  width:17vw;
+  height: 4vh;
   font-size: 1rem;
 }
 
@@ -55,4 +55,47 @@ body{
   height:25vh;
   width:26vw;
   padding: 12px;
+}
+label{
+  text-align: center;
+}
+
+.code-editor {
+    display: block;
+    position: absolute;
+    font-family: monospace;
+    line-height: 1.5;
+    width: 700px;
+    height: 700px;
+    border: solid 1px;
+    background-color: #f5f2f0; // default prismjs theme background color
+}
+
+.code-editor textarea {
+    background-color: transparent;
+    color: transparent;
+    caret-color: black;
+    padding: 10px;
+    margin: 0px;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    width: 100%;
+    height:100%;
+    border: none;
+}
+
+.code-editor code {
+    pointer-events: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    background-color: transparent;
 }

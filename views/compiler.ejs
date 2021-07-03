@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="css/compiler.css" />
+<script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+<link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link>
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
   integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -6,35 +8,40 @@
   referrerpolicy="no-referrer"
 ></script>
 
-<div id="Container">
+
+
   <div id="form-Container">
     <form action="/send/request" id="new-post-form" method="POST">
-      <textarea
+      
+      <div id="myWrapper">
+        <div id="myEditor"></div>
+      </div>
+      <!-- <textarea
         name="code"
         id="code"
         placeholder="Start writing code from here.."
         cols="30"
         rows="10"
-      ></textarea>
+      ></textarea> -->
+
+
 
       <div id="Options">
         <label for="category">Language:&nbsp </label>
-        <input
-          type="text"
-          name="language"
-          placeholder="Choose Language:"
-          id="category-header"
-          list="Language"
-          required
-        />
 
-        <datalist id="Language">
-          <option value="py"></option>
-          <option value="Java"></option>
-          <option value="C++"></option>
-          <option value="HTML"></option>
-          <option value="Javascript"></option>
-        </datalist>
+        <select name="Language" id="category-header">
+            <option value="py">Python</option>
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+            <option value="c">C</option>
+            <option value="cs">C#</option>
+            <option value="rb">Ruby</option>
+            <option value="kt">Kotlin</option>
+            <option value="swift">Swift</option>
+        </select>
+
+
+
 
         <input id="run-btn" type="submit" value="Compile and Run" />
 
@@ -51,5 +58,24 @@
 
   <%- include('output')%>
 </div>
+<script src="js/prism.js"></script>
 
+<script>
+  var mode = document.getElementById("category-header")
+  console.log(mode)
+  YUI().use(
+  'aui-ace-editor',
+  function(Y) {
+    new Y.AceEditor(
+      {
+        boundingBox: '#myEditor',
+        mode: "python",
+        height: '700',
+        value: 'Write something here...',
+        width: '1425'
+      }
+    ).render();
+  }
+);
+</script>
 <script src="/js/script.js"></script>
