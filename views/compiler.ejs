@@ -1,6 +1,11 @@
 <link rel="stylesheet" href="css/compiler.css" />
-<script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
-<link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link>
+<link rel="stylesheet" type="text/css" href="plugin/codemirror/lib/codemirror.css">
+<!-- <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script> -->
+<!-- <link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link> -->
+<script type="text/javascript" src="plugin/codemirror/lib/codemirror.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.css" integrity="sha512-gFMl3u9d0xt3WR8ZeW05MWm3yZ+ZfgsBVXLSOiFz2xeVrZ8Neg0+V1kkRIo9LikyA/T9HuS91kDfc2XWse0K0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.min.js" integrity="sha512-uClAZvjjJrwJN8QakX7+03YbWHtx6ZcTw8JoDPucqzviDCYF3QEZNaRXyu1dxdfKm1g/TQ409Ko3CAdb6zXnnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js" integrity="sha512-9mEZ3vO6zMj0ub2Wypnt8owrHeoJCH22MkzeJ9eD3hca8/Wlqo5pEopI6HloA0F53f/RkRkHs8TyZMxbwVmnFw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
   integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -8,33 +13,27 @@
   referrerpolicy="no-referrer"
 ></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/clike/clike.min.js" integrity="sha512-m3ghu/xpRyZKDD9RVnxZIT8+lYTjrh7tAz7xbj94du1+3voHC2llSKQQOywnxkYzPcjexBUwf2nhGV9caxlEZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js" integrity="sha512-9mEZ3vO6zMj0ub2Wypnt8owrHeoJCH22MkzeJ9eD3hca8/Wlqo5pEopI6HloA0F53f/RkRkHs8TyZMxbwVmnFw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../assets/plugin/mode/clike"></script>
+<script src="../assets/plugin/mode/javascript"></script>
 
+<!-- <script src="../assets/plugin/mode/clike></script> -->
 
-  <div id="form-Container">
-    <form action="/send/request" id="new-post-form" method="POST">
-      
-      <div id="myWrapper">
-  <form class="form">
-    <div class="form-group">
-      <label for="mode" class="control-label">Language Mode:</label>
-      <select id="mode" class="form-control">
-        <option>python</option>
-        <option>java</option>
-
-      </select>
-    </div>
-  </form>
-  <div id="myEditor"></div>
+<div id="header-div"> 
+  <h1>CodeoCity</h1>
 </div>
 
-      <input type="hidden" value="" name = "code" id="code">
-      <!-- <textarea
+  <div id="form-Container">
+    <form action="/send/request" id="code-form" method="POST">
+      
+      <textarea
         name="code"
         id="code"
-        placeholder="Start writing code from here.."
+        placeholder="Write the code from here..........."
         cols="30"
-        rows="10"
-      ></textarea> -->
+          rows="10"
+        ></textarea>
 
 
 
@@ -65,31 +64,14 @@
           rows="10"
         ></textarea>
       </div>
+
     </form>
+
+
+
+    <%- include('output')%>
   </div>
-
-  <%- include('output')%>
-</div>
-<!-- <script src="js/prism.js"></script> -->
-
-<!-- <script>
-  var mode = document.getElementById("category-header")
-  console.log(mode)
-  YUI().use(
-  'aui-ace-editor',
-  function(Y) {
-    new Y.AceEditor(
-      {
-        boundingBox: '#myEditor',
-        mode: "python",
-        height: '700',
-        value: 'Write something here...',
-        width: '1425'
-      }
-    ).render();
-  }
-);
-
-// console.log(Y.one('#value'))
-</script> -->
 <script src="/js/script.js"></script>
+
+
+ 

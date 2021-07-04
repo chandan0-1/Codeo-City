@@ -31,9 +31,8 @@ module.exports.compile = async function (req, res) {
       if (temp) {
         ans = temp.output;
       }
-      // $.("#output").html(ans);
-      // $("#output").text("Hello world!");
-      console.log("Hello",ans);
+
+      console.log(ans)
       if (req.xhr) {
         return res.status(200).json({
           data: {
@@ -44,7 +43,6 @@ module.exports.compile = async function (req, res) {
       }
     });
 
-    // return res.redirect("back");
   } catch (err) {
     console.log(err);
     return;

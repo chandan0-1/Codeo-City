@@ -7,6 +7,15 @@ body{
   flex-direction: row;
 }
 
+/*------------ Header-------------- */
+#header-div{
+  text-align: center;
+  overflow: hidden;
+  background-color: rgb(82, 82, 218);
+  color: white;
+  letter-spacing: 2px;
+
+}
 
 #Options{
   display: flex;
@@ -17,30 +26,37 @@ body{
 #Output-window {
   position: absolute;
   padding: 10px;
-  background-color: darkgrey;
+  background-color: rgb(41, 48, 110);
   width: 25%;
   height: 100vh;
   right:0;
-  top:0
+  top:7.3vh;
+  overflow: hidden;
 }
 #output-header{
   color: rgb(7, 255, 172);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 #output{
   margin-left: 1vw;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: white;
+
 }
 #form-Container{
-  background-color: lightgray;
+  background-color: rgb(20, 31, 34);
   width:75%
 }
-#code, #myEditor{
+#code{
   width:97%;
   height:65vh;
   font-size: 1.3rem;
   padding: 15px;
+  font-size: 2rem;
 }
 
 #category-header{
@@ -58,47 +74,14 @@ body{
   height:25vh;
   width:26vw;
   padding: 12px;
+  background-color: black;
+  color:white
 }
 label{
   text-align: center;
 }
 
-.code-editor {
-    display: block;
-    position: absolute;
-    font-family: monospace;
-    line-height: 1.5;
-    width: 700px;
-    height: 700px;
-    border: solid 1px;
-    background-color: #f5f2f0; // default prismjs theme background color
-}
-
-.code-editor textarea {
-    background-color: transparent;
-    color: transparent;
-    caret-color: black;
-    padding: 10px;
-    margin: 0px;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
-    width: 100%;
-    height:100%;
-    border: none;
-}
-
-.code-editor code {
-    pointer-events: none;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    margin: 0px;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
-    background-color: transparent;
+.CodeMirror {
+font-family: Arial, monospace;
+font-size: 20px;
 }
