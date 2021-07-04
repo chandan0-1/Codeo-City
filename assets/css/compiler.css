@@ -1,6 +1,4 @@
-body{
-  margin: 0;
-}
+
 
 #Container{
   display: flex;
@@ -9,29 +7,60 @@ body{
 
 /*------------ Header-------------- */
 #header-div{
+  height:7.5vh;
   text-align: center;
   overflow: hidden;
-  background-color: rgb(82, 82, 218);
+  border-top: 1px solid white;
+  background-color: #111a1a;
   color: white;
-  letter-spacing: 2px;
-
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 0px 0px 10px rgb(37, 35, 33);
 }
 
+#header-div p{
+  font-size:4rem;
+  margin-top: 10px;
+}
+#header-div span{
+  color:rgb(255, 0, 98)
+}
 #Options{
+  width: 99%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 7px 25px ;
+  /* background-color: red; */
+
+}
+/*------------ main window------------- */
+#form-Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  height:100%;
+  background-color: none;
 }
 
+form{
+  width:72.5%;
+  display: flex;
+  flex-direction: column;
+}
 #Output-window {
-  position: absolute;
+  font-family: "Montserrat", sans-serif;
   padding: 10px;
-  background-color: rgb(41, 48, 110);
-  width: 25%;
-  height: 100vh;
+  background-color: rgb(22, 24, 42);
+  width: 26%;
+  height: 91vh;
   right:0;
   top:7.3vh;
-  overflow: hidden;
+  border: 1px white dashed;
+  margin-top: 0.7vh ;
+  margin-right: 0.5vw;
 }
 #output-header{
   color: rgb(7, 255, 172);
@@ -45,43 +74,99 @@ body{
   font-size: 2rem;
   letter-spacing: 1px;
   color: white;
+  /* text-align: center; */
+}
 
-}
-#form-Container{
-  background-color: rgb(20, 31, 34);
-  width:75%
-}
 #code{
-  width:97%;
+  width:100%;
   height:65vh;
   font-size: 1.3rem;
   padding: 15px;
   font-size: 2rem;
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border : white 2px solid;
+  border-radius: 10px;
+  margin:5px 10px;
+  color:white;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+::placeholder{
+  color: white;
 }
 
 #category-header{
+  margin-top: 1.5vh;
   width:17vw;
   height: 4vh;
-  font-size: 1rem;
+  font-size: 1.8rem;
+  background-color: inherit;
+  color: rgb(255, 0, 136);
+  border: 1px solid white;
+  color: white;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+select option{
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 #run-btn{
-  width:10vw;
-  height: 4vh;
+  margin-top: 1.5vh;
+  height: 4.1vh;
   font-size: 0.8rem;
+  background-color: rgb(255, 0, 136);
+  font-size: 1.8rem;
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+  padding: 0px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgb(224, 10, 99);
+}
+
+#run-btn:hover{
+  color: rgb(255, 0, 136);
+  background-color: white;
+  box-shadow: 0px 0px 10px white;
+
 }
 #input{
   height:25vh;
   width:26vw;
   padding: 12px;
   background-color: black;
-  color:white
+  color:white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+
 }
 label{
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 .CodeMirror {
 font-family: Arial, monospace;
 font-size: 20px;
+}
+
+/* -------------input-language------------ */
+
+
+#input-language label{
+  color:rgb(216, 205, 45);
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
 }

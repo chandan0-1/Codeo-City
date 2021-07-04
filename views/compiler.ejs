@@ -21,7 +21,7 @@
 <!-- <script src="../assets/plugin/mode/clike></script> -->
 
 <div id="header-div"> 
-  <h1>CodeoCity</h1>
+  <p>Codeo<<span>*</span>>City</p>
 </div>
 
   <div id="form-Container">
@@ -30,7 +30,7 @@
       <textarea
         name="code"
         id="code"
-        placeholder="Write the code from here..........."
+        placeholder="Start writing code from here........."
         cols="30"
           rows="10"
         ></textarea>
@@ -38,18 +38,19 @@
 
 
       <div id="Options">
-        <label for="category">Language:&nbsp </label>
-
-        <select name="Language" id="category-header">
-            <option value="py">Python</option>
-            <option value="java">Java</option>
-            <option value="cpp">C++</option>
-            <option value="c">C</option>
-            <option value="cs">C#</option>
-            <option value="rb">Ruby</option>
-            <option value="kt">Kotlin</option>
-            <option value="swift">Swift</option>
-        </select>
+        <div id="input-language">
+          <label for="category">Language:&nbsp </label>
+          <select name="Language" id="category-header">
+              <option value="py">Python</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="cs">C#</option>
+              <option value="rb">Ruby</option>
+              <option value="kt">Kotlin</option>
+              <option value="swift">Swift</option>
+          </select>
+        </div>
 
 
 
@@ -68,8 +69,8 @@
     </form>
 
 
-
     <%- include('output')%>
+
   </div>
 <script src="/js/script.js"></script>
 
