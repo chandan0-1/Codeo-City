@@ -16,15 +16,38 @@
   letter-spacing: 3px;
   font-weight: bolder;
   font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Zen Tokyo Zoo', cursive; */
+  /* font-family: 'Bungee Shade', cursive; */
+  /* font-family: 'Otomanopee One', sans-serif; */
   text-shadow: 0px 0px 10px rgb(37, 35, 33);
 }
 
+
 #header-div p{
-  font-size:4rem;
-  margin-top: 10px;
+  font-size:4.1rem;
+  margin-top: 6px;
 }
-#header-div span{
-  color:rgb(255, 0, 98)
+#star{
+  color:rgb(255, 0, 98);
+}
+#city{
+  
+  color: rgb(77, 245, 119);
+  color:rgb(226, 135, 253);
+  font-family: 'Zen Tokyo Zoo', cursive;
+  font-family: 'Bungee Shade', cursive;
+
+}
+#codeo{
+  color: rgb(77, 245, 119);
+    font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Zen Tokyo Zoo', cursive; */
+  /* font-family: 'Bungee Shade', cursive; */
+  font-family: 'Otomanopee One', sans-serif;
+  /* text-shadow: 0px 0px 30px rgb(255, 254, 255); */
+  /* font-family: 'Gloria Hallelujah', cursive; */
+
+
 }
 #Options{
   width: 99%;

@@ -1,7 +1,7 @@
 const express = require("express");
 const expressEjsLayouts = require("express-ejs-layouts");
 const app = express();
-const port = process.env.PORT || 8001;
+const port = process.env.PORT || 8000;
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
 
