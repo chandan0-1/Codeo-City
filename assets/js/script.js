@@ -6,22 +6,21 @@
 //   start()
 // });
 
-// function start(){
-//     let language = $("#category-header").val();
-//     let d = {"java" : "text/x-java", "python": "python"}
-//     language = d[language]
-//     console.log(language)
+function start(){
+    // let language = $("#category-header").val();
+    // let d = {"java" : "text/x-java", "python": "python"}
+    // language = d[language]
+    // console.log(language)
 
-//     var codeText = $(".codemirror")[0];
-//     var editor = CodeMirror.fromTextArea(codeText, {
-//       lineNumbers: true,
-//       theme: "dracula",
-//       mode: `${language}`,
-//     });
-//     editor.setSize("75vw", "70vh");
-//     // editor.setOption("mode", language);
-//   };
-// // start()
+    var codeText = $(".codemirror")[0];
+    var editor = CodeMirror.fromTextArea(codeText, {
+      lineNumbers: true,
+      theme: "dracula",
+      mode: "python"
+    });
+    editor.setSize("73vw", "66vh");
+  };
+start()
 
 
   
