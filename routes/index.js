@@ -6,6 +6,6 @@ const cntrl = require("../controllers/index");
 // router.get("/", cntrl);
 router.get("/", cntrl.compiler);
 
-router.post("/send/request", cntrl.compile);
+router.post("/send/request", cntrl.compileJdoodle);
 
 module.exports = router;
