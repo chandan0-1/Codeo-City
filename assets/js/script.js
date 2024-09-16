@@ -1,17 +1,5 @@
 
-
-
-// $("#category-header").change(function () {
-//   var language = $("#category-header").val();
-//   start()
-// });
-
 function start(){
-    // let language = $("#category-header").val();
-    // let d = {"java" : "text/x-java", "python": "python"}
-    // language = d[language]
-    // console.log(language)
-
     var codeText = $(".codemirror")[0];
     var editor = CodeMirror.fromTextArea(codeText, {
       lineNumbers: true,
