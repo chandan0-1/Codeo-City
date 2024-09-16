@@ -8,23 +8,12 @@ module.exports.compiler = function (req, res) {
   });
 };
 
-// let OutPut = document.getElementById("output");
 
 module.exports.compile = async function (req, res) {
-  console.log(req.body);
-  const body = {
-      "clientId": "a5da78a2d8b92d3a0c320aacff7d8a3d",
-      "clientSecret": "7024caa570faff672f00a622dd12bedea1e204d226749edda3a199549d34d0da",
-      "script": "print(\"Hello, World!\")",
-      "stdin": "",
-      "language": "python3",
-      "versionIndex": "3",
-      "compileOnly": false
-    }
   try {
     var options = {
       method: "POST",
-      url: url,
+      url: "https://codexweb.netlify.app/.netlify/functions/enforceCode",
       headers: {
         "Content-Type": "application/json",
       },
@@ -33,7 +22,7 @@ module.exports.compile = async function (req, res) {
 
     request(options, function (error, response) {
       if (error) {
-        console.log("Error arrises while fetching the data", error.data);
+        console.log("Error arrises while fetching the data", error);
         return;
       }
 
