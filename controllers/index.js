@@ -50,7 +50,6 @@ module.exports.compile = async function (req, res) {
 
 
 module.exports.compileJdoodle = async function (req, res) {
-  console.log(req.body);
   const url = 'https://api.jdoodle.com/v1/execute'
   const body = {
       "clientId": "a5da78a2d8b92d3a0c320aacff7d8a3d",
@@ -60,10 +59,8 @@ module.exports.compileJdoodle = async function (req, res) {
       ...getLanguageSpecs(req.body.Language)
     }
   try {
-    console.log(body,'jsdgjbd')
       axios.post(url, body)
       .then((response) => {
-          console.log(response)
 
           return res.status(200).json({
             data: {
@@ -73,12 +70,12 @@ module.exports.compileJdoodle = async function (req, res) {
           });
       }).catch( (err) => {
           if (err) {
-              // console.log('Got error while making api call', err)
+              console.log('Got error while making api call', err)
               return res.status(500).json(err.data);
           }
       })
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     return;
   }
 };
